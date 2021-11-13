@@ -27,7 +27,7 @@ print(df_drop.dtypes)
 print(df_drop['review_time'].head())
 
 #using the .unique() module we can see the unique variables in the #column 'beer_style'
-print(df_drop['beer_style'].unique()
+print(df_drop['beer_style'].unique())
 
 #.value_counts() to return how many different variables are in style column
 print(df_drop['beer_style'].value_counts())

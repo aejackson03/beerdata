@@ -65,3 +65,23 @@ print(fav_beer_clean['beer_name'].value_counts())
 
 #only show the top 15 most rated beers
 print(fav_beer_clean['beer_name'].value_counts().head(20))
+
+#import pandas package pd
+import pandas as pd
+
+# read CSV file
+results = pd.read_csv('https://query.data.world/s/zhsp6ytp4wfqkqq3vdp2eo5fq255sk')
+  
+# count no. of lines
+print("Number of lines present:", 
+      len(results))
+
+#for loop
+li = []
+for filename in all_files:
+    df = pd.read_csv('https://query.data.world/s/zhsp6ytp4wfqkqq3vdp2eo5fq255sk', index_col=None, header=0)
+    li.append(df)
+    
+li[1]
+df = pd.concat(li, axis=0, ignore_index=True)
+df

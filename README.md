@@ -19,6 +19,8 @@ The user needs to install python 3 or higher to run the project.
 
 3.***NEED*** Implement a “master loop” console application where the user can repeatedly enter commands/perform actions, including choosing to exit the program.
 
+4. Analyze text and display information about it (ex: how many words in a paragraph).
+
 Any special instructions required for the reviewer to run your project. (For example: “run python main.py” from the command line)
 
 Guide to use markdown for README.md files (https://guides.github.com/features/mastering-markdown/)

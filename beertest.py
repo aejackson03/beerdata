@@ -77,11 +77,14 @@ print("Number of lines present:",
       len(results))
 
 #for loop
-li = []
-for filename in all_files:
-    df = pd.read_csv('https://query.data.world/s/zhsp6ytp4wfqkqq3vdp2eo5fq255sk', index_col=None, header=0)
-    li.append(df)
-    
-li[1]
-df = pd.concat(li, axis=0, ignore_index=True)
-df
+import pandas as pd
+for filename in ['https://query.data.world/s/zhsp6ytp4wfqkqq3vdp2eo5fq255sk']:
+    data = pd.read_csv(filename, index_col='beer_name')
+    print(filename, data.min())
+
+review_overall = 4.0
+if review_overall > 3:
+    print('greater')
+else:
+    print('not greater')
+print('done')

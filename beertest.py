@@ -63,34 +63,52 @@ fav_beer_clean = fav_beer_clean[(fav_beer_clean['beer_abv']>=5.0)&(fav_beer_clea
 #print value counts of different beers in the beer_name col
 print(fav_beer_clean['beer_name'].value_counts())
 
-#only show the top 15 most rated beers
+#only show the top 20 most rated beers
 print(fav_beer_clean['beer_name'].value_counts().head(20))
 
+import matplotlib.pyplot as plt
+matplotlib inline
+plt.style.use('ggplot')
+
+x = ['fav_beer_clean']
+beer = [5, 6, 15, 22, 24, 8]
+
+x_pos = [i for i, _ in enumerate(x)]
+
+plt.bar(x_pos, beer, color='green')
+plt.xlabel("Beer Name")
+plt.ylabel("Overall Review")
+plt.title("Top Beer Rating Chart")
+
+plt.xticks(x_pos, x)
+
+plt.show()
+
 #give user ability to add new beers to the list 
-new_list = []
+#new_list = []
 #append elements to this list **** NEED TO RESEARCH MORE NOT SURE HOW THIS SHOULD WORK****
-new_beer = input("Add a new beer")
-new_list.append("new_beer")
+#new_beer = input("Add a new beer")
+#new_list.append("new_beer")
 
 #import pandas package pd
-import pandas as pd
+#import pandas as pd
 
 # read CSV file
-results = pd.read_csv('https://query.data.world/s/zhsp6ytp4wfqkqq3vdp2eo5fq255sk')
+#results = pd.read_csv('https://query.data.world/s/zhsp6ytp4wfqkqq3vdp2eo5fq255sk')
 
 # count no. of lines
-print("Number of lines present:", 
-      len(results))
+#print("Number of lines present:", 
+      #len(results))
 
 #for loop
-import pandas as pd
-for filename in ['https://query.data.world/s/zhsp6ytp4wfqkqq3vdp2eo5fq255sk']:
+#import pandas as pd
+#for filename in ['https://query.data.world/s/zhsp6ytp4wfqkqq3vdp2eo5fq255sk']:
     data = pd.read_csv(filename, index_col='beer_name')
     print(filename, data.min())
 
-review_overall = 4.0 #how can I pull this rating from the CSV file?*****
-if review_overall > 3:
-    print('greater')
-else:
-    print('not greater')
-print('done')
+#review_overall = 4.0 #how can I pull this rating from the CSV file?*****
+#if review_overall > 3:
+    #print('greater')
+#else:
+    #print('not greater')
+#print('done')

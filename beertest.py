@@ -66,12 +66,18 @@ print(fav_beer_clean['beer_name'].value_counts())
 #only show the top 15 most rated beers
 print(fav_beer_clean['beer_name'].value_counts().head(20))
 
+#give user ability to add new beers to the list 
+new_list = []
+#append elements to this list **** NEED TO RESEARCH MORE NOT SURE HOW THIS SHOULD WORK****
+new_beer = input("Add a new beer")
+new_list.append("new_beer")
+
 #import pandas package pd
 import pandas as pd
 
 # read CSV file
 results = pd.read_csv('https://query.data.world/s/zhsp6ytp4wfqkqq3vdp2eo5fq255sk')
-  
+
 # count no. of lines
 print("Number of lines present:", 
       len(results))
@@ -82,7 +88,7 @@ for filename in ['https://query.data.world/s/zhsp6ytp4wfqkqq3vdp2eo5fq255sk']:
     data = pd.read_csv(filename, index_col='beer_name')
     print(filename, data.min())
 
-review_overall = 4.0
+review_overall = 4.0 #how can I pull this rating from the CSV file?*****
 if review_overall > 3:
     print('greater')
 else:

@@ -9,19 +9,17 @@ For more information on how to use Google Colab please see this link: https://co
 Relevant packages that need installed to run the project:
 - Python
 - Pandas
-- import matplotlib
-- import matplotlib.pyplot
-- import seaborn as sns 
+- import seaborn 
 
 The user needs to install python 3 or higher to run the project. To download the most recent version of Python visit https://www.python.org/downloads/
 
 3+ requirements
-1. Read data from an external file, such as text, JSON, CSV, etc and use that data in your application.
+1. Read data from an external file (CSV) and use that data in your application
 
-2. Clean the data 
+2. Clean the data
 
 3. Analyze text and display information about it
 
-4. Visualize data in a graph.
+4. Visualize data in a graph
 
 5. I have other features such as a list and loop, but they are still in progress and will be seen commented out in the code.

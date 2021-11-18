@@ -10,6 +10,8 @@ Relevant packages that need installed to run the project:
 - Python
 - Pandas
 - import seaborn 
+- import matplotlib
+- import matplotlib.pyplot
 
 The user needs to install python 3 or higher to run the project. To download the most recent version of Python visit https://www.python.org/downloads/
 
